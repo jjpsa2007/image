@@ -1,0 +1,32 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+    <edmx:DataServices
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+        <Schema
+            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="TSD_DISCHARGED">
+            <EntityType Name="TSD_DISCHARGEDType">
+                <Key>
+                    <PropertyRef Name="PRODUCT_CATEGORY_1"/>
+                </Key>
+                <Property Name="START_TIME" Type="Edm.String" MaxLength="11"/>
+                <Property Name="END_TIME" Type="Edm.String" MaxLength="20"/>
+                <Property Name="PRODUCT_CATEGORY_1" Type="Edm.String" Nullable="false" MaxLength="6"/>
+                <Property Name="EQUIPMENT_CATEGORY" Type="Edm.String" MaxLength="5"/>
+                <Property Name="PRODUCT_CATEGORY" Type="Edm.Decimal" Precision="18" Scale="0"/>
+            </EntityType>
+            <EntityType Name="IMAGEType">
+                <Key>
+                    <PropertyRef Name="IMAGE_NAME"/>
+                </Key>
+                <Property Name="IMAGE_NAME" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="IMAGE_CONTENT" Type="Edm.Binary"/>
+            </EntityType>
+            <EntityContainer Name="TSD_DISC" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="TSD_DISCHARGED" EntityType="TSD_DISCHARGED.TSD_DISCHARGEDType"/>
+                <EntitySet Name="IMAGE" EntityType="TSD_DISCHARGED.IMAGEType"/>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

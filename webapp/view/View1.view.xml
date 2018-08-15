@@ -1,0 +1,38 @@
+<mvc:View
+	controllerName="image.controller.View1"
+	xmlns:l="sap.ui.layout"
+	xmlns:u="sap.ui.unified"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	class="viewPadding">
+	<l:HorizontalLayout>
+	<l:VerticalLayout>
+		<u:FileUploader
+			id="fileUploader"
+			name="myFileUpload"
+			uploadUrl="/FUZZY_data/ASIAN/TSD_DISC.xsodata/IMAGE/"
+			uploadComplete="handleUploadComplete"
+			style="Emphasized"
+			fileType="txt,jpg"
+			sendXHR = "true"
+            useMultipart = "false"
+			placeholder="Choose a file for Upload...">
+				<u:headerParameters>
+					<u:FileUploaderParameter
+						name="x-csrf-token"
+						value="Fetch"/>
+					<u:FileUploaderParameter
+						name="headerParam2"
+						value="bar"/>
+				</u:headerParameters>
+			</u:FileUploader>
+		<Button
+			text="Upload File"
+			press="handleUploadPress"/>
+	</l:VerticalLayout>
+	<Button text="Get Image" press="getImageData"/>
+	<Image src="" height="40%" width="40%" alt="My new test" id="imgId">
+		
+	</Image>
+	</l:HorizontalLayout>
+</mvc:View>
