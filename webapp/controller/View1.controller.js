@@ -46,13 +46,17 @@ reader.readAsDataURL(file);
 		handleUploadComplete: function(e){
 			console.log(e);
 		},
-		getImageData: function(event){
+		trimSuperfluousBytes: function(oValue){
+			var oval = "data:image/png;base64," + oValue;
+			return oval;
+		}
+/*		getImageData: function(event){
 			var oModel = this.getOwnerComponent().getModel("proj");
 			oModel.read("/IMAGE", null, null, true, function(res) {
 				var img = controller.getView().byId("imgId");
 				img.setSrc("data:image/png;base64," + res.results[0].IMAGE_CONTENT);
 				console.log(res);
 				});
-		}
+		}*/
 	});
 });

@@ -31,7 +31,7 @@
 			press="handleUploadPress"/>
 	</l:VerticalLayout>
 	<Button text="Get Image" press="getImageData"/>
-	<Image src="" height="40%" width="40%" alt="My new test" id="imgId">
+	<Image height="40%" width="40%" alt="My new test" id="imgId" binding="{proj>/IMAGE('BSA-LOGO.jpg')}" src="{path : 'proj>IMAGE_CONTENT', formatter : '.trimSuperfluousBytes'}">
 		
 	</Image>
 	</l:HorizontalLayout>
