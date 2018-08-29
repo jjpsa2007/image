@@ -13,7 +13,7 @@
 			uploadUrl="/FUZZY_data/ASIAN/TSD_DISC.xsodata/IMAGE/"
 			uploadComplete="handleUploadComplete"
 			style="Emphasized"
-			fileType="txt,jpg"
+			fileType="txt,jpg,tif"
 			sendXHR = "true"
             useMultipart = "false"
 			placeholder="Choose a file for Upload...">

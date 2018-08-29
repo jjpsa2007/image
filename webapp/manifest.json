@@ -46,7 +46,7 @@
 	},
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "image.view.View1",
+			"viewName": "image.view.page1",
 			"type": "XML"
 		},
 		"dependencies": {
@@ -79,6 +79,18 @@
 					"uri": "css/style.css"
 				}
 			]
+		},
+		"routing": {
+			"targets": {
+				"page1": {
+					"viewType": "XML",
+					"viewName": "page1"
+				}
+			}
 		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
 	}
 }

@@ -1,1 +1,16 @@
-/* Enter your custom styles here */
+.sapMIBar.sapMHeader-CTX {
+    color: white;
+    background-color: #2874f0 !important;
+    filter: none;
+    background-image: none;
+}/* Enter your custom styles here */
+.sapMIBar-CTX .sapMTitle {
+    color: white !important;
+    text-shadow: 0 0 0.125rem #ffffff;
+}
+.sapMBtnInner {
+	    color: white !important;
+}
+.sapMSF {
+	    position: fixed !important;
+}
