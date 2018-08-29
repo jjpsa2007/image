@@ -19,7 +19,6 @@ handleUploadPress: function(oEvent) {
 			var oFileUploader = this.byId("fileUploader");
 			var reader = new FileReader();
 			var domRef = oFileUploader.getFocusDomRef();
-			debugger;
 			var file = domRef.files[0];
 			reader.onload = function(event) {
 		    var dataUri = (event.target.result).split(",");
